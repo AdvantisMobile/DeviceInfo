@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "deviceINFO",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

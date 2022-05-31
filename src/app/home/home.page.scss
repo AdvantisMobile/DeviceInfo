@@ -7,7 +7,9 @@
   top: 50%;
   transform: translateY(-50%);
 }
-
+.header-collapse-condense{
+  display: flex !important;
+}
 #container strong {
   font-size: 20px;
   line-height: 26px;
@@ -24,4 +26,20 @@
 
 #container a {
   text-decoration: none;
+}
+ion-button{
+  width: 80%;
+    --background: #12497a;
+}
+ 
+ion-title{
+  text-align: center;
+  font-size: 25px;
+}
+ion-row{
+  width: 100%;
+}
+ion-item{
+  --padding-start: 10px;
+  --padding-end: 10px;
 }

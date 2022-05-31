@@ -1,20 +1,21 @@
-<ion-header [translucent]="true">
+<ion-header collapse="condense">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title size="large">Device Informations</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-button (click)="onScan()">Scan</ion-button>
+    <div class="list" [hidden]="listShows">
+      <ion-item *ngFor="let item of infos; let i = index">
+        <ion-row>
+          <ion-col><ion-label>{{item.key}}</ion-label></ion-col>
+          <ion-col><ion-label>{{item.value}}</ion-label></ion-col>
+        </ion-row>
+      </ion-item>
+    </div>
   </div>
 </ion-content>
