@@ -13,12 +13,13 @@ export class HomePage {
   constructor(
     private loadCtrl: LoadingController
   ) {
+    //Getting Device informations
     this.getId();
     this.getInfo();
     this.getBatteryInfo();
     this.getLanguageCode(); 
   }
-
+  // Scan Button Click Event
   async onScan(){
     const loading = await this.loadCtrl.create({
       message: 'Scanning Device Informations...',
@@ -50,6 +51,9 @@ export class HomePage {
     const info = await Device.getLanguageCode();
     this.addInformations(info);
   }
+  /* Add information to display those in Front-End 
+    Fetch via key and values.
+  */
   addInformations(info:any){
     Object.keys(info).forEach((key) => {
       let item = {
