@@ -1,0 +1,7 @@
+{
+  "name": "deviceINFO",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
